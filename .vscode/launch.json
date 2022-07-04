@@ -44,6 +44,36 @@
             "stopAtEntry": false,
             "console": "internalConsole",
         },
+        {
+            "name": "PubSubPublisher",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/PubSubPublisher/bin/Debug/net6.0/PubSubPublisher.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/PubSubPublisher",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+        },
+        {
+            "name": "PubSubSubscriber",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/PubSubSubscriber/bin/Debug/net6.0/PubSubSubscriber.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/PubSubSubscriber",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+        },
+        {
+            "name": "PubSubAnotherSubscriber",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/PubSubAnotherSubscriber/bin/Debug/net6.0/PubSubAnotherSubscriber.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/PubSubAnotherSubscriber",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+        },
     ],
     "compounds": [
         {
@@ -59,6 +89,14 @@
             "configurations": [
                 "RequestResponseReceiver",
                 "RequestResponseSender"]
+        },
+        {
+            "name": "Demo #3: Pub/Sub",
+            "preLaunchTask": "build solution",
+            "configurations": [
+                "PubSubPublisher",
+                "PubSubSubscriber",
+                "PubSubAnotherSubscriber"]
         },
     ]
 }
