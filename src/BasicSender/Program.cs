@@ -18,7 +18,7 @@ namespace BasicSender
                 var body = Encoding.UTF8.GetBytes(message);
 
                 channel.BasicPublish(exchange: "",
-                                     routingKey: "basicreceiver",
+                                     routingKey: "basic-receiver",
                                      basicProperties: null,
                                      body: body);
                 channel.WaitForConfirmsOrDie(new TimeSpan(0, 0, 5));

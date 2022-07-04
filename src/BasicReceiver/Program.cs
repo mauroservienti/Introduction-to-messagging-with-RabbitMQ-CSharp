@@ -14,7 +14,7 @@ namespace BasicReceiver
             using (var channel = connection.CreateModel())
             {
                 channel.ConfirmSelect();
-                channel.QueueDeclare(queue: "basicreceiver",
+                channel.QueueDeclare(queue: "basic-receiver",
                                      durable: true,
                                      exclusive: false,
                                      autoDelete: false,
@@ -27,7 +27,7 @@ namespace BasicReceiver
                     var message = Encoding.UTF8.GetString(body);
                     Console.WriteLine(" [x] Received {0}", message);
                 };
-                channel.BasicConsume(queue: "basicreceiver",
+                channel.BasicConsume(queue: "basic-receiver",
                                      autoAck: true,
                                      consumer: consumer);
 
