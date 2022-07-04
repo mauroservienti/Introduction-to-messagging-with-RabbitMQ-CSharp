@@ -1,0 +1,37 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "BasicSender",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/BasicSender/bin/Debug/net6.0/BasicSender.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/BasicSender",
+            "stopAtEntry": false,
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "BasicReceiver",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/BasicReceiver/bin/Debug/net6.0/BasicReceiver.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/BasicReceiver",
+            "stopAtEntry": false,
+            "console": "integratedTerminal",
+        },
+    ],
+    "compounds": [
+        {
+            "name": "Basic send/receive",
+            "preLaunchTask": "build solution",
+            "configurations": [
+                "BasicSender",
+                "BasicReceiver"]
+        },
+    ]
+}
