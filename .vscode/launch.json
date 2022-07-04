@@ -12,7 +12,7 @@
             "args": [],
             "cwd": "${workspaceFolder}/src/BasicSender",
             "stopAtEntry": false,
-            "console": "integratedTerminal",
+            "console": "internalConsole",
         },
         {
             "name": "BasicReceiver",
@@ -22,16 +22,43 @@
             "args": [],
             "cwd": "${workspaceFolder}/src/BasicReceiver",
             "stopAtEntry": false,
-            "console": "integratedTerminal",
+            "console": "internalConsole",
+        },
+        {
+            "name": "RequestResponseReceiver",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/RequestResponseReceiver/bin/Debug/net6.0/RequestResponseReceiver.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/RequestResponseReceiver",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+        },
+        {
+            "name": "RequestResponseSender",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/RequestResponseSender/bin/Debug/net6.0/RequestResponseSender.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/RequestResponseSender",
+            "stopAtEntry": false,
+            "console": "internalConsole",
         },
     ],
     "compounds": [
         {
-            "name": "Basic send/receive",
+            "name": "Demo #1: Basic send/receive",
             "preLaunchTask": "build solution",
             "configurations": [
-                "BasicSender",
-                "BasicReceiver"]
+                "BasicReceiver",
+                "BasicSender"]
+        },
+        {
+            "name": "Demo #2: Request/Response",
+            "preLaunchTask": "build solution",
+            "configurations": [
+                "RequestResponseReceiver",
+                "RequestResponseSender"]
         },
     ]
 }
