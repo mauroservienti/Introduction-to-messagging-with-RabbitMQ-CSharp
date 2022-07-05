@@ -1,5 +1,7 @@
 # Introduction to messagging with RabbitMQ & C#
  
+Demos for the [UGIdotNET "Introduction to messaging with RabbitMQ & C#" Small Talk](https://milestone.topics.it/events/ugidotnet-smalltalk-messaging-2022.html)
+
 ## Requirements
 
 The following requirements must be met in order to successfully run the demos:
